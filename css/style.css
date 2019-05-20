@@ -1,0 +1,117 @@
+body{
+    margin:0;
+    padding:0;
+    background:rgba(20,211,240,0.1);
+    font-family:sans-serif;
+}
+
+.navbar{
+    position:relative;
+}
+
+.menu-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.5rem 2rem;
+    background:#23d2ed;
+    color:#fff;
+    box-shadow:0px 2px 5px rgba(0,0,0,0.25);
+}
+
+.menu-button{
+    border:none;
+    background:none;
+    margin:0 5px;
+    font-size:1.1rem;
+    color:#fff;
+}
+
+.info-bar{
+    position:absolute;
+    right:1rem;
+    margin-top:1rem;
+    float:right;
+}
+
+.circle-button{
+    border-radius:50%;
+    box-shadow:2px 3px 5px rgba(0,0,0,0.30);
+    margin:0px 3px;
+    border:none;
+    background:#23d2ed;
+    color:#fff;
+    text-align:center;
+    width:2.5rem;
+    height:2.5rem;
+    transition:0.2s;
+    outline:none;
+}
+.circle-button:hover{
+    background:#fff;
+    color:#23d2ed;
+}
+
+.pomodoro{
+    display:flex;
+    align-items:center;
+    height:100vh;
+    justify-content:space-evenly;
+    transform:translate(0,-50px);
+}
+.note-zone{
+    height:80%;
+    flex:1;
+    position:relative;
+}
+.button-note{
+    position:absolute;
+    top:60%;
+    left:40%;
+    font-size:2rem;
+    width:4.5rem;
+    height:4.5rem;
+}
+.clock-zone{
+    height:80%;
+    flex:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items:center;
+    position:relative;
+}
+.clock-zone  svg{
+    position:absolute;
+    height:80%;
+}
+
+
+.time-display{
+    position:absolute;
+    font-size:5rem;
+    font-family:sans-serif;
+}
+
+.button-zone{
+    position:absolute;
+    top:70%;
+}
+
+.moving-outline{
+    transform:rotate(-90deg);
+}
+
+.add-zone{
+    height:80%;
+    flex:1;
+    position:relative;
+}
+.button-add{
+    position:absolute;
+    top:60%;
+    left:40%;
+    font-size:2.5rem;
+    width:4.5rem;
+    height:4.5rem;
+}

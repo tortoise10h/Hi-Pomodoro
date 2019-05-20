@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Hi Pomodoro</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="menu-bar">
+                <div class="app-name">
+                    <h1>Hi Pomodoro</h1>
+                </div>
+                <div class="menu-option">
+                    <button data="faq" class="menu-button">FAQ</button>
+                    <button data="setting" class="menu-button">Setting</button>
+                </div>
+            </div>
+            <div class="info-bar">
+                <span class="stack-icon">
+                    <img src="./img/tomato-icon-x40.png">
+                </span>
+                <span class="stack-icon">
+                    <img src="./img/tomato-icon-x40.png">
+                </span> 
+                <span class="stack-icon">
+                    <img src="./img/tomato-icon-x40.png">
+                </span> 
+                <span class="stack-icon">
+                    <img src="./img/tomato-icon-x40.png">
+                </span> 
+            </div>
+        </div>
+        <div class="pomodoro">
+            <div class="note-zone">
+                <!-- <button class="circle-button button-note"><i class="fas fa-align-justify"></i></button> -->
+                &nbsp;
+            </div>
+            <div class="clock-zone">
+                <audio class="alarm-sound">
+                    <source src="./sound/alarm-sound.mp3">
+                </audio>
+                <svg 
+                            class="track-outline"
+                            width="453" 
+                            height="453" 
+                            viewBox="0 0 453 453" 
+                            fill="none" 
+                            xmlns="http://www.w3.org/2000/svg">
+                    <circle 
+                            cx="226.5" 
+                            cy="226.5" 
+                            r="216.5" 
+                            stroke="white" 
+                            stroke-width="20"
+                            />
+                </svg>
+                <svg
+                    class="moving-outline"
+                    width="453" 
+                    height="453" 
+                    viewBox="0 0 453 453" 
+                    fill="none" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle 
+                    cx="226.5" 
+                    cy="226.5" 
+                    r="216.5" 
+                    stroke="#018EBA" 
+                    stroke-width="20"
+                    />
+                </svg>
+                <div id="timeDisplay" class="time-display">
+                    05:30
+                </div>
+                <div class="button-zone">
+                    <button id="stopButton" class="circle-button">
+                        <i class="fas fa-square-full"></i>
+                    </button>
+                    <button id="playButton" class="circle-button">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button id="pauseButton" style="display:none" class="circle-button">
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button id="resetButton" class="circle-button">
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="add-zone">
+                <!-- <button class="circle-button button-add"><i class="fas fa-plus"></i></button> --> &nbsp;
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
