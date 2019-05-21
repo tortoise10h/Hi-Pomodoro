@@ -25,9 +25,9 @@ const pomodoro = () => {
     let stackCount = 0;
 
     //pomodoro first come
-    const pomodoroTime = 5;
-    const restTime = 2;
-    const longRestTime = 3;
+    const pomodoroTime = 25 * 60;
+    const restTime = 5 * 60;
+    const longRestTime = 15 * 60;
     const stacksPerCycle = 4;
 
     let workCountDownTime = pomodoroTime;
