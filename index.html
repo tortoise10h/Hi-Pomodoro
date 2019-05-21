@@ -10,12 +10,13 @@
     <body>
         <div class="navbar">
             <div class="menu-bar">
-                <div class="app-name">
-                    <h1>Hi Pomodoro</h1>
+                <div class="app-logo">
+                    <img class="logo-icon" src="./img/tomato-icon-x80.png">
+                    <h1 class="logo-name">Hi Pomodoro</h1>
                 </div>
                 <div class="menu-option">
-                    <button data="faq" class="menu-button">FAQ</button>
-                    <button data="setting" class="menu-button">Setting</button>
+                    <button style="display:none" data="faq" class="menu-button">FAQ</button>
+                    <button  style="display:none" data="setting" class="menu-button">Setting</button>
                 </div>
             </div>
             <div class="info-bar">
@@ -76,17 +77,21 @@
                     05:30
                 </div>
                 <div class="button-zone">
-                    <button id="stopButton" class="circle-button">
+                    <button id="switchModeButton" class="tooltip circle-button">
                         <i class="fas fa-square-full"></i>
+                        <span class="tooltiptext">Switch mode</span>
                     </button>
-                    <button id="playButton" class="circle-button">
+                    <button id="playButton" class="tooltip circle-button">
                         <i class="fas fa-play"></i>
+                        <span class="tooltiptext">Count down</span>
                     </button>
-                    <button id="pauseButton" style="display:none" class="circle-button">
+                    <button id="pauseButton" style="display:none" class="circle-button tooltip">
                         <i class="fas fa-pause"></i>
+                        <span class="tooltiptext">Pause</span>
                     </button>
-                    <button id="resetButton" class="circle-button">
+                    <button id="resetButton" class="tooltip circle-button">
                         <i class="fas fa-redo-alt"></i>
+                        <span class="tooltiptext">Reset time</span>
                     </button>
                 </div>
             </div>

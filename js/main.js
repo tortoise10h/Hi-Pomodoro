@@ -1,7 +1,7 @@
 const pomodoro = () => {
     const playButton = document.querySelector('#playButton');
     const pauseButton = document.querySelector('#pauseButton');
-    const stopButton = document.querySelector('#stopButton');
+    const switchModeButton = document.querySelector('#switchModeButton');
     const resetButton = document.querySelector('#resetButton');
 
     //sound
@@ -25,9 +25,9 @@ const pomodoro = () => {
     let stackCount = 0;
 
     //pomodoro first come
-    const pomodoroTime = 25 * 60;
-    const restTime = 5 * 60;
-    const longRestTime = 15 * 60;
+    const pomodoroTime = 5;
+    const restTime = 2;
+    const longRestTime = 3;
     const stacksPerCycle = 4;
 
     let workCountDownTime = pomodoroTime;
@@ -57,12 +57,39 @@ const pomodoro = () => {
 
     //when click reset button
     resetButton.addEventListener('click', () => {
+        //display play button to click play again
         playButton.style.display = "";
         pauseButton.style.display = "none";
+
+        //set count down time to begin
         workCountDownTime = pomodoroTime;
         displayPomodoroTime(workCountDownTime);
+
+        //stop count down
         stopCountDown();
+
+        //reset moving outline
+        movingOutline.style.strokeDasharray = movingOutlineLength;
+        movingOutline.style.strokeDashoffset = movingOutlineLength;
     });
+
+
+    //when click switch mode button
+    switchModeButton.addEventListener('click', () => {
+        if(is_work == true){
+            switchMode(is_work,restTime);
+        }else{
+            switchMode(is_work,pomodoroTime);
+        }
+         //stop count down
+        stopCountDown();
+
+        //reset moving outline
+        movingOutline.style.strokeDasharray = movingOutlineLength;
+        movingOutline.style.strokeDashoffset = movingOutlineLength;
+
+    });
+
 
     function countDown(){
         if(is_work == true){
